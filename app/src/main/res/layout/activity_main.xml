@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5fb0c9"
+    android:background="@drawable/field"
     android:orientation="vertical">
 
 
@@ -26,16 +26,22 @@
                 android:text="E-mail"/>
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_style"
                 android:drawableTint="#FF4081"
+                android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
-                android:singleLine="true"
-                android:importantForAutofill="no" />
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password" />
 
             <EditText
+                android:id="@+id/password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -53,8 +59,7 @@
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="18sp"
-                android:background="@drawable/et_style"
-
+                android:background="@color/ButtonColor"
                 />
 
             <TextView
@@ -72,7 +77,6 @@
                 android:autoLink="all"
                 android:text="Non hai un account?Registrati!"
                 android:textAlignment="center" />
-
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

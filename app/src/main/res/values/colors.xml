@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4CAF50</color>
-    <color name="colorPrimaryDark">#4CAF50</color>
+    <color name="colorPrimary">#ABC586</color>
+    <color name="colorPrimaryDark">#ABC586</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="ButtonColor">#F1C961</color>
+    <color name="TableColor">#8CA3B9</color>
 </resources>
