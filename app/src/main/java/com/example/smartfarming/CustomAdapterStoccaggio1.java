@@ -9,11 +9,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CustomAdapterStoccaggio extends BaseAdapter {
+public class CustomAdapterStoccaggio1 extends BaseAdapter {
     Context context;
-    ArrayList<Prodotti_Stoccaggio> arrayList;
+    ArrayList<Prodotti_Stoccaggio_Table1> arrayList;
 
-    public CustomAdapterStoccaggio(Context context, ArrayList<Prodotti_Stoccaggio> arrayList){
+    public CustomAdapterStoccaggio1(Context context, ArrayList<Prodotti_Stoccaggio_Table1> arrayList){
         this.context=context;
         this.arrayList=arrayList;
     }
@@ -35,8 +35,8 @@ public class CustomAdapterStoccaggio extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView= LayoutInflater.from(context).inflate(R.layout.element_list_stoccaggio,parent,false);
-        TextView nomeProdotto=convertView.findViewById(R.id.nomeProdotto);
-        TextView stato=convertView.findViewById(R.id.stato);
+        TextView nomeProdotto=convertView.findViewById(R.id.row1);
+        TextView stato=convertView.findViewById(R.id.row2);
 
         nomeProdotto.setText(arrayList.get(position).getNomeProdotto());
         stato.setText(arrayList.get(position).getStato());

@@ -1,6 +1,6 @@
 package com.example.smartfarming;
 
-public class Prodotti_Stoccaggio {
+public class Prodotti_Stoccaggio_Table1 {
         private String nomeProdotto;
         private String stato;
 
@@ -17,7 +17,7 @@ public class Prodotti_Stoccaggio {
             this.stato=stato;
         }
 
-        public Prodotti_Stoccaggio(String nomeProdotto, String stato){
+        public Prodotti_Stoccaggio_Table1(String nomeProdotto, String stato){
             this.nomeProdotto=nomeProdotto;
             this.stato=stato;
         }

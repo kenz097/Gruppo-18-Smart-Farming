@@ -7,14 +7,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:id="@+id/nomeProdotto"
+        android:id="@+id/row1"
         android:textSize="18dp"
+        android:textColor="#000000"
         android:padding="10dp"
         android:layout_alignRight="@+id/view"
         android:gravity="center"
         />
     <View
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:background="#000000"
@@ -24,15 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:id="@+id/stato"
+        android:id="@+id/row2"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:textColor="#000000"
         android:padding="10dp"
         android:layout_alignLeft="@+id/view"
         android:gravity="center"
         />
-    
-      
-    
-
 </RelativeLayout>
