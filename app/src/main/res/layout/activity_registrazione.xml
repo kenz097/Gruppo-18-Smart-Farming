@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/firstRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome*"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/nome"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstRelative"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cognome*"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/cognoem"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondRelative"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail*"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/e_mail"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fourthRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thirdRelative"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password*"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fiveRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fourthRelative"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero Carta*"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/numberCard"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sixRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fiveRelative"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cvv*"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/cvv"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="300dp"
+            android:background="@drawable/et_style"
+            android:drawableTint="#FF4081"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sixRelative"
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="2dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sevenRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sixRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserisci la tua data di nascita"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/eightRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sevenRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giorno"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/et_style"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nineRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eightRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mese"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/et_style"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tenRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nineRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anno"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/et_style"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tenRelative"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/ButtonColor"
+        android:onClick="goLogin"
+        android:text="Registrati" />
+
+</RelativeLayout>

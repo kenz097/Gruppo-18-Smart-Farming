@@ -92,16 +92,16 @@
                 android:background="@drawable/et_style"
                 android:text="Raccolta"
                 android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Esci dall'account"
                 android:layout_below="@+id/raccolta"
                 android:layout_centerHorizontal="true"
-                android:textSize="20sp"
-                android:textColor="#000"
                 android:layout_marginTop="20dp"
-                />
+                android:text="Esci dall'account"
+                android:textColor="#000"
+                android:textSize="20sp" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

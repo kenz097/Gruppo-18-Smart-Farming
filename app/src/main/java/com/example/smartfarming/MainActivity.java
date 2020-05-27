@@ -6,14 +6,19 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Button accedi;
     private EditText email;
     private EditText password;
     MainActivity mainActivity;
+    private TextView smarrita;
+    private TextView registrazione;
 
     public void setMainActivity(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
@@ -26,13 +31,38 @@ public class MainActivity extends AppCompatActivity {
         accedi = findViewById(R.id.accedi);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+        smarrita = findViewById(R.id.smarrita);
 
     }
 
+    public void missPassword(View view) {
+        final EditText edittext = new EditText(mainActivity.getApplicationContext());
+        edittext.setInputType(InputType.TYPE_CLASS_PHONE);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Cambio password");
+        builder.setMessage("Inserisci la tua e-mail e le invieremo le modalità per il cambio password");
+        builder.setView(edittext);
 
-    public void checkLogin() {
-        if (email.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
-            if (password.toString().equalsIgnoreCase("ciaociao")) {
+        // Set up the buttons
+        builder.setPositiveButton("Conferma e-mail", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        builder.show();
+    }
+
+    public void checkLogin(TextView t1, TextView t2, View view) {
+        if (t1.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
+            if (t2.toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
                 startActivity(intent);
             }
@@ -42,5 +72,10 @@ public class MainActivity extends AppCompatActivity {
             alert.setMessage("Email o password errati");
             alert.show();
         }
+    }
+
+    public void goRegistrazione(View view) {
+        Intent intent = new Intent(this, Registrazione.class);
+        startActivity(intent);
     }
 }

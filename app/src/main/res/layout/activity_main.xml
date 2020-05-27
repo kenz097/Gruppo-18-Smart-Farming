@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/accedi"
-            android:autoLink="all"
+            android:onClick="missPassword"
             android:text="Non ricordi la password?Clicca qui!"
             android:textAlignment="center" />
 
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/smarrita"
             android:layout_marginTop="10dp"
-            android:autoLink="all"
+            android:onClick="goRegistrazione"
             android:text="Non hai un account?Registrati!"
             android:textAlignment="center" />
 
