@@ -107,7 +107,7 @@
             android:id="@+id/nome_Prodotto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_element_style"
+            android:background="@drawable/et_style"
             android:singleLine="true"
             android:paddingTop="8dp"
             android:layout_marginLeft="25dp"
@@ -132,6 +132,17 @@
             android:layout_marginLeft="20dp"
             android:textSize="15dp"
             android:id="@+id/label2"
+            />
+        <EditText
+            android:id="@+id/posizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            android:singleLine="true"
+            android:paddingTop="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
             />
     </LinearLayout>
 </RelativeLayout>
