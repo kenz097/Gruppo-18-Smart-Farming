@@ -15,20 +15,18 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/reltOne"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:orientation="vertical"
             android:paddingTop="30dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="E-mail"/>
 
             <EditText
                 android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="100dp"
                 android:background="@drawable/et_style"
                 android:drawableTint="#FF4081"
                 android:importantForAutofill="no"
@@ -38,45 +36,68 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Password" />
+                android:text="E-mail"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reltTwo"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/reltOne"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingTop="30dp">
 
             <EditText
                 android:id="@+id/password"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="100dp"
                 android:background="@drawable/et_style"
                 android:drawableTint="#FF4081"
+                android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:singleLine="true" />
 
-            <Button
-                android:id="@+id/accedi"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="22dp"
-                android:text="Accedi"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                android:background="@color/ButtonColor"
-                />
-
             <TextView
-                android:id="@+id/smarrita"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="all"
-                android:text="Non ricordi la password?Clicca qui!"
-                android:textAlignment="center" />
+                android:text="Password"
+                android:textSize="20dp" />
+        </RelativeLayout>
 
-            <TextView
-                android:id="@+id/registrazione"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="all"
-                android:text="Non hai un account?Registrati!"
-                android:textAlignment="center" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/accedi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reltTwo"
+            android:layout_margin="22dp"
+            android:background="@color/ButtonColor"
+            android:onClick="checkLogin"
+            android:text="Accedi"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/smarrita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accedi"
+            android:autoLink="all"
+            android:text="Non ricordi la password?Clicca qui!"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/registrazione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/smarrita"
+            android:layout_marginTop="10dp"
+            android:autoLink="all"
+            android:text="Non hai un account?Registrati!"
+            android:textAlignment="center" />
+
     </RelativeLayout>
 </RelativeLayout>

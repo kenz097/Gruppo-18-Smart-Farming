@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        app:srcCompat="@drawable/field_homepage" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeOne"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/datiCampo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_style"
+                android:text="Dati campo"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/semina"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_toRightOf="@id/datiCampo"
+                android:background="@drawable/et_style"
+                android:text="Semina"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeTwo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeOne"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/stoccaggio"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_style"
+                android:text="Stoccaggio"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/irrigazione"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_toRightOf="@id/stoccaggio"
+                android:background="@drawable/et_style"
+                android:text="Irrigazione"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeTwo"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/raccolta"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/et_style"
+                android:text="Raccolta"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esci dall'account"
+                android:layout_below="@+id/raccolta"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>
