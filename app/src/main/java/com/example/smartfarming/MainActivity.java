@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void checkLogin(TextView t1, TextView t2, View view) {
+    public void checkLogin(EditText t1, EditText t2, View view) {
         if (t1.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
             if (t2.toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
