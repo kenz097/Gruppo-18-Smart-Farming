@@ -16,13 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private Button accedi;
     private EditText email;
     private EditText password;
-    MainActivity mainActivity;
     private TextView smarrita;
     private TextView registrazione;
 
-    public void setMainActivity(MainActivity mainActivity) {
-        this.mainActivity = mainActivity;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void missPassword(View view) {
-        final EditText edittext = new EditText(mainActivity.getApplicationContext());
+        final EditText edittext = new EditText(this.getApplicationContext());
         edittext.setInputType(InputType.TYPE_CLASS_PHONE);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Cambio password");
@@ -60,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void checkLogin(EditText t1, EditText t2, View view) {
-        if (t1.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
-            if (t2.toString().equalsIgnoreCase("ciaociao")) {
+    public void checkLogin(View view) {
+        if (email.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
+            if (password.toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
                 startActivity(intent);
             }
         } else {
-            AlertDialog.Builder alert = new AlertDialog.Builder(mainActivity);
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Errore");
             alert.setMessage("Email o password errati");
             alert.show();
