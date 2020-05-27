@@ -16,15 +16,11 @@ public class MainActivity extends AppCompatActivity {
     private Button accedi;
     private EditText email;
     private EditText password;
-    MainActivity mainActivity;
     private TextView smarrita;
     private TextView registrazione;
     private String account_email=email.getText().toString();
     private String account_password=password.getText().toString();
 
-    public void setMainActivity(MainActivity mainActivity) {
-        this.mainActivity = mainActivity;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void missPassword(View view) {
-        final EditText edittext = new EditText(mainActivity.getApplicationContext());
+        final EditText edittext = new EditText(this.getApplicationContext());
         edittext.setInputType(InputType.TYPE_CLASS_PHONE);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Cambio password");
@@ -62,14 +58,21 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
+<<<<<<< HEAD
     public void checkLogin() {
         if (account_email.equals("giacomomancini@gmail.com")) {
             if (account_password.equals("ciaociao")) {
                 Intent intent = new Intent(getApplicationContext(), Homepage.class);
+=======
+    public void checkLogin(View view) {
+        if (email.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
+            if (password.toString().equalsIgnoreCase("ciaociao")) {
+                Intent intent = new Intent(this, Homepage.class);
+>>>>>>> 267ea638b8123b6e03db44d4511eafecea09770b
                 startActivity(intent);
             }
         } else {
-            AlertDialog.Builder alert = new AlertDialog.Builder(mainActivity);
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Errore");
             alert.setMessage("Email o password errati");
             alert.show();
