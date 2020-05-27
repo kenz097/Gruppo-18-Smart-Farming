@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     MainActivity mainActivity;
     private TextView smarrita;
     private TextView registrazione;
+    private String account_email=email.getText().toString();
+    private String account_password=password.getText().toString();
 
     public void setMainActivity(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
@@ -60,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-    public void checkLogin(EditText t1, EditText t2, View view) {
-        if (t1.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
-            if (t2.toString().equalsIgnoreCase("ciaociao")) {
-                Intent intent = new Intent(this, Homepage.class);
+    public void checkLogin() {
+        if (account_email.equals("giacomomancini@gmail.com")) {
+            if (account_password.equals("ciaociao")) {
+                Intent intent = new Intent(getApplicationContext(), Homepage.class);
                 startActivity(intent);
             }
         } else {
