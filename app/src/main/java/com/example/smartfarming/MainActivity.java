@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
     private Button accedi;
     private EditText email;
     private EditText password;
+    MainActivity mainActivity;
+
+    public void setMainActivity(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +31,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void checkLogin() {
-        if (email.toString().equals("giacomomancini@gmail.com")) {
-            if (password.toString().equals("ciaociao")) {
+        if (email.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
+            if (password.toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
                 startActivity(intent);
             }
         } else {
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            AlertDialog.Builder alert = new AlertDialog.Builder(mainActivity);
             alert.setTitle("Errore");
             alert.setMessage("Email o password errati");
-            alert.setPositiveButton("Capito", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    //set what would happen when positive button is clicked
-                    finish();
-                }
-            });
             alert.show();
         }
     }
