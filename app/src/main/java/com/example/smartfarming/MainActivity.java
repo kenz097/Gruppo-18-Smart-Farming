@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private TextView smarrita;
     private TextView registrazione;
-    private String account_email=email.getText().toString();
-    private String account_password=password.getText().toString();
+   
 
 
     @Override
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         smarrita = findViewById(R.id.smarrita);
+
 
     }
 
@@ -58,17 +58,12 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
-<<<<<<< HEAD
-    public void checkLogin() {
-        if (account_email.equals("giacomomancini@gmail.com")) {
-            if (account_password.equals("ciaociao")) {
-                Intent intent = new Intent(getApplicationContext(), Homepage.class);
-=======
+
     public void checkLogin(View view) {
-        if (email.toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
-            if (password.toString().equalsIgnoreCase("ciaociao")) {
+        if (email.getText().toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
+            if (password.getText().toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
->>>>>>> 267ea638b8123b6e03db44d4511eafecea09770b
+
                 startActivity(intent);
             }
         } else {
