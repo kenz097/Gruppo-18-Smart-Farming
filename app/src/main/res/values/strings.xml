@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Login</string>
+    <string name="activityStoccaggio">Stoccaggio</string>
+    <string name="activityRegistrazione">Registrazione</string>
+    <string name="activityRaccolta">Raccolta</string>
+    <string name="activityHomepage">Homepage</string>
 </resources>
