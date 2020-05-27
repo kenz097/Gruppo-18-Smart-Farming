@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Stoccaggio">
-
-        </activity>
+        <activity android:name=".Stoccaggio"></activity>
+        <activity android:name=".Homepage"></activity>
+        <activity android:name=".Raccolta"></activity>
+        <activity android:name=".Registrazione"></activity>
     </application>
 
 </manifest>
