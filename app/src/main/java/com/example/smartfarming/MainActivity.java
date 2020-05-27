@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private TextView smarrita;
     private TextView registrazione;
-   
 
 
     @Override
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void missPassword(View view) {
         final EditText edittext = new EditText(this.getApplicationContext());
-        edittext.setInputType(InputType.TYPE_CLASS_PHONE);
+        edittext.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Cambio password");
         builder.setMessage("Inserisci la tua e-mail e le invieremo le modalità per il cambio password");
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
