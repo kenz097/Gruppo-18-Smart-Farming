@@ -14,17 +14,17 @@ public class Homepage extends AppCompatActivity {
     }
 
     public void goRaccolta(View view) {
-        Intent intent = new Intent(this, Raccolta.class);
+        Intent intent = new Intent(getApplicationContext(), Raccolta.class);
         startActivity(intent);
     }
 
     public void goStoccaggio(View view) {
-        Intent intent = new Intent(this, Stoccaggio.class);
-        startActivity(intent);
+        Intent intent1 = new Intent(getApplicationContext(), Stoccaggio.class);
+        startActivity(intent1);
     }
 
     public void goLogout(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent2);
     }
 }
