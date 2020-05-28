@@ -104,9 +104,10 @@
             />
 
         <EditText
-            android:id="@+id/nome_Prodotto"
+            android:id="@+id/nome_prodotto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:background="@drawable/et_style"
             android:singleLine="true"
             android:paddingTop="8dp"
@@ -121,14 +122,14 @@
         android:orientation="horizontal"
         android:layout_below="@+id/linearlayout1"
         android:id="@+id/linearlayout2"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Inserisci posizione:"
             android:textColor="#000000"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:textSize="15dp"
             android:id="@+id/label2"
@@ -137,12 +138,94 @@
             android:id="@+id/posizione"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:background="@drawable/et_style"
             android:singleLine="true"
             android:paddingTop="8dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginRight="25dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout2"
+        android:id="@+id/linearlayout3"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserisci nuova quantità:"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:id="@+id/label3"
+            />
+        <EditText
+            android:id="@+id/quantita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/et_style"
+            android:singleLine="true"
+            android:paddingTop="8dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout3"
+        android:id="@+id/linearlayout4"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inserisci numero prodotti:"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"
+            android:id="@+id/label4"
+            />
+        <EditText
+            android:id="@+id/numero_prodotti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            android:inputType="number"
+            android:singleLine="true"
+            android:paddingTop="8dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearlayout4"
+        android:id="@+id/linearlayout5"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/inserisciProdotto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:background="@drawable/border_button"
+            android:onClick="addProduct"
+            android:text="Inserisci la nuova quantità nel sistema"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
     </LinearLayout>
 </RelativeLayout>

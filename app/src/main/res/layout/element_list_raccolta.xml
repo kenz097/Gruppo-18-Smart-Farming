@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/row1"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:layout_alignRight="@+id/view1"
+        android:gravity="center"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:background="#000000"
+        android:id="@+id/view1"
+        />
+
+    <TextView
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/view2"
+        android:layout_toEndOf="@+id/row1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="200dp"
+        android:background="#000000"
+        android:id="@+id/view2"
+        />
+
+    <TextView
+        android:id="@+id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/view2"
+        android:layout_toStartOf="@+id/row4"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="18dp" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="300dp"
+        android:background="#000000"
+        android:id="@+id/view3"
+        />
+    <TextView
+        android:id="@+id/row4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/view3"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/change"
+        android:layout_marginRight="30dp"
+        android:layout_alignRight="@+id/delete"
+        android:id="@+id/change"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/delete"
+        android:id="@+id/delete"
+        android:layout_alignRight="@+id/row4"/>
+</RelativeLayout>
