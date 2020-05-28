@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,28 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void missPassword(View view) {
-        final EditText edittext = new EditText(this.getApplicationContext());
-        edittext.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Cambio password");
-        builder.setMessage("Inserisci la tua e-mail e le invieremo le modalità per il cambio password");
-        builder.setView(edittext);
-
-        // Set up the buttons
-        builder.setPositiveButton("Conferma e-mail", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-
-        builder.show();
+        //View v = LayoutInflater.from(this).inflate(R.layout.custom_layout, null);
     }
 
 

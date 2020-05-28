@@ -9,24 +9,22 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/back"
-        android:onClick="goLogin"
-        />
+        android:onClick="goLogin" />
 
     <RelativeLayout
-        android:layout_below="@id/backId"
         android:id="@+id/firstRelative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/backId"
         android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome*"
             android:layout_marginLeft="20dp"
+            android:text="Nome*"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nome"
@@ -50,10 +48,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cognome*"
             android:layout_marginLeft="20dp"
+            android:text="Cognome*"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/cognoem"
@@ -77,10 +75,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-mail*"
             android:layout_marginLeft="20dp"
+            android:text="E-mail*"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/e_mail"
@@ -104,10 +102,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password*"
             android:layout_marginLeft="20dp"
+            android:text="Password*"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/pass"
@@ -131,10 +129,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Numero Carta*"
             android:layout_marginLeft="20dp"
+            android:text="Numero Carta*"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/numberCard"
@@ -158,10 +156,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CVV*"
             android:layout_marginLeft="20dp"
+            android:text="CVV*"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/cvv"
@@ -198,7 +196,7 @@
             android:layout_height="wrap_content"
             android:text="Inserisci la tua data di nascita"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -214,7 +212,7 @@
             android:layout_height="wrap_content"
             android:text="Giorno"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="50dp"
@@ -237,7 +235,7 @@
             android:layout_height="wrap_content"
             android:text="Mese"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="50dp"
@@ -260,7 +258,7 @@
             android:layout_height="wrap_content"
             android:text="Anno"
             android:textSize="17sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:layout_width="50dp"
@@ -278,7 +276,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/border_button"
         android:onClick="goLogin"
-        android:textColor="#fff"
-        android:text="Registrati" />
+        android:text="Registrati"
+        android:textColor="#fff" />
 
 </RelativeLayout>
