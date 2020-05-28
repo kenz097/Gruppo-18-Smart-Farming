@@ -1,6 +1,6 @@
 package com.example.smartfarming;
 
-public class Quantita_Raccolta {
+public class Quantita_Raccolta_Table {
     private String nomeProdotto;
     private int posizione;
     private int quantita;
@@ -30,7 +30,7 @@ public class Quantita_Raccolta {
     public void setNumProdotti(int numProdotti){
         this.numProdotti=numProdotti;
     }
-    public Quantita_Raccolta(String nomeProdotto, int posizione, int quantita, int numProdotti){
+    public Quantita_Raccolta_Table(String nomeProdotto, int posizione, int quantita, int numProdotti){
         this.nomeProdotto=nomeProdotto;
         this.posizione=posizione;
         this.quantita=quantita;

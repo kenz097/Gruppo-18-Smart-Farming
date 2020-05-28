@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -20,7 +21,8 @@ public class Raccolta extends AppCompatActivity {
     private EditText quantita;
     private EditText numero_prodotti;
     private ListView list;
-
+    private ArrayAdapter<String> adapter;
+    private ArrayList<String> array;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class Raccolta extends AppCompatActivity {
         list=(ListView)findViewById(R.id.list);
 
 
+        array= new ArrayList<>();
+        adapter=new ArrayAdapter<String>(this,R.layout.element_list_raccolta,array);
+        list.setAdapter(adapter);
 
     }
     public void goBack(View view){
@@ -40,6 +45,9 @@ public class Raccolta extends AppCompatActivity {
         startActivity(intent);
     }
     public void addProduct(View v){
+
+        String nameProduct= nome_prodotto.getText().toString();
+        String position=posizione.getText().toString();
 
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);

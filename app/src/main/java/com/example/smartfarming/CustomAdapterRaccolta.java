@@ -7,15 +7,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class CustomAdapterRaccolta extends BaseAdapter {
     Context context;
-    ArrayList<Quantita_Raccolta> arrayList;
+    ArrayList<Quantita_Raccolta_Table> arrayList;
 
-    public CustomAdapterRaccolta(Context context, ArrayList<Quantita_Raccolta> arrayList){
+    public CustomAdapterRaccolta(Context context, ArrayList<Quantita_Raccolta_Table> arrayList){
         this.context=context;
         this.arrayList=arrayList;
     }
