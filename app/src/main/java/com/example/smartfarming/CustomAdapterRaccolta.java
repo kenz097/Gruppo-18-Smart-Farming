@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class CustomAdapterRaccolta extends BaseAdapter {
     Context context;
-    ArrayList<Quantità_Stoccaggio> arrayList;
+    ArrayList<Quantita_Raccolta> arrayList;
 
-    public CustomAdapterRaccolta(Context context, ArrayList<Quantità_Stoccaggio> arrayList){
+    public CustomAdapterRaccolta(Context context, ArrayList<Quantita_Raccolta> arrayList){
         this.context=context;
         this.arrayList=arrayList;
     }

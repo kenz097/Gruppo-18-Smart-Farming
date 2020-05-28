@@ -5,12 +5,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Raccolta extends AppCompatActivity {
     private EditText nome_prodotto;
@@ -18,6 +20,8 @@ public class Raccolta extends AppCompatActivity {
     private EditText quantita;
     private EditText numero_prodotti;
     private ListView list;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,18 +33,14 @@ public class Raccolta extends AppCompatActivity {
         list=(ListView)findViewById(R.id.list);
 
 
+
     }
     public void goBack(View view){
         Intent intent= new Intent(this, Homepage.class);
         startActivity(intent);
     }
     public void addProduct(View v){
-        ArrayList<Quantità_Stoccaggio> array= new ArrayList<>();
-        Bundle bundle= new Bundle();
-        bundle.putString("nome_prodotti",nome_prodotto.getText().toString());
-        bundle.putString("posizione",posizione.getText().toString());
-        bundle.putString("quantita",quantita.getText().toString());
-        bundle.putString("numero_prodotti",numero_prodotti.getText().toString());
+
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Inserimento quantità nel sistema");
