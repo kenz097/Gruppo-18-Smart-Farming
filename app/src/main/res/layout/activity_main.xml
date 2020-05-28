@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/reltTwo"
             android:layout_margin="22dp"
-            android:background="@color/ButtonColor"
+            android:background="@drawable/border_button"
             android:onClick="checkLogin"
             android:text="Accedi"
             android:textAllCaps="false"

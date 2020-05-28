@@ -34,7 +34,7 @@
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:singleLine="true" />
     </RelativeLayout>
 
@@ -60,7 +60,7 @@
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:singleLine="true" />
     </RelativeLayout>
 
@@ -265,8 +265,9 @@
         android:layout_below="@id/tenRelative"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:background="@color/ButtonColor"
+        android:background="@drawable/border_button"
         android:onClick="goLogin"
+        android:textColor="#fff"
         android:text="Registrati" />
 
 </RelativeLayout>
