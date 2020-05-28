@@ -37,7 +37,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="E-mail"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -64,7 +65,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"/>
         </RelativeLayout>
 
         <Button
@@ -87,7 +89,8 @@
             android:layout_below="@+id/accedi"
             android:onClick="missPassword"
             android:text="Non ricordi la password?Clicca qui!"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/registrazione"
@@ -97,7 +100,8 @@
             android:layout_marginTop="10dp"
             android:onClick="goRegistrazione"
             android:text="Non hai un account?Registrati!"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 </RelativeLayout>
