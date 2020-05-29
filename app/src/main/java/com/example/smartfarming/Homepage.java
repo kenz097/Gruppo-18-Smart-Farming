@@ -19,12 +19,27 @@ public class Homepage extends AppCompatActivity {
     }
 
     public void goStoccaggio(View view) {
-        Intent intent1 = new Intent(getApplicationContext(), Stoccaggio.class);
-        startActivity(intent1);
+        Intent intent = new Intent(getApplicationContext(), Stoccaggio.class);
+        startActivity(intent);
     }
 
     public void goLogout(View view) {
-        Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent2);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
+
+    public void goIrrigazione(View view) {
+        Intent intent = new Intent(getApplicationContext(), Irrigazione.class);
+        startActivity(intent);
+    }
+    /*
+    public void goSemina(View view) {
+        Intent intent = new Intent(getApplicationContext(), Semina.class);
+        startActivity(intent);
+    }*/
+    /*
+    public void goDatiCampo(View view) {
+        Intent intent = new Intent(getApplicationContext(), DatiCampo.class);
+        startActivity(intent);
+    }*/
 }

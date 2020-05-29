@@ -17,8 +17,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/table"
-        android:layout_below="@+id/back"
-        android:stretchColumns="4">
+        android:layout_below="@+id/back">
         <TableRow android:background="@color/TableColor">
             <TextView
                 android:text="Prodotto"
@@ -26,7 +25,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textColor="#ffff"
-                android:gravity="left"
+                android:gravity="center"
                 />
             <View
                 android:layout_width="1dp"
@@ -65,13 +64,26 @@
                 android:layout_marginRight="10dp"
                 android:textColor="#ffff"
                 android:gravity="center"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#000000"/>
+            <TextView
+                android:text=""
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffff"
+                android:gravity="center"/>
+
         </TableRow>
+
         <ListView
             android:id="@+id/list"
             android:layout_width="wrap_content"
-            android:layout_height="157dp"
-            android:layout_below="@+id/text1">
-        </ListView>
+            android:layout_height="103dp"
+            android:layout_below="@+id/text1"></ListView>
     </TableLayout>
     <TextView
         android:layout_width="match_parent"
@@ -110,7 +122,9 @@
             android:inputType="text"
             android:background="@drawable/et_style"
             android:singleLine="true"
-            android:paddingTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="25dp"
@@ -141,7 +155,9 @@
             android:inputType="number"
             android:background="@drawable/et_style"
             android:singleLine="true"
-            android:paddingTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
@@ -172,7 +188,9 @@
             android:inputType="number"
             android:background="@drawable/et_style"
             android:singleLine="true"
-            android:paddingTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
@@ -203,7 +221,9 @@
             android:background="@drawable/et_style"
             android:inputType="number"
             android:singleLine="true"
-            android:paddingTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"

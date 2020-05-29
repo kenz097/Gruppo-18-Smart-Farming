@@ -33,6 +33,9 @@
             android:layout_marginLeft="150dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:singleLine="true" />
@@ -54,12 +57,15 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/cognoem"
+            android:id="@+id/cognome"
             android:layout_width="220dp"
             android:layout_height="30dp"
             android:layout_marginLeft="150dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:singleLine="true" />
@@ -87,6 +93,9 @@
             android:layout_marginLeft="150dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:singleLine="true" />
@@ -114,6 +123,9 @@
             android:layout_marginLeft="150dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:singleLine="true" />
@@ -141,6 +153,9 @@
             android:layout_marginLeft="150dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="number"
             android:singleLine="true" />
@@ -168,6 +183,9 @@
             android:layout_marginLeft="300dp"
             android:background="@drawable/et_style"
             android:drawableTint="#FF4081"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:importantForAutofill="no"
             android:inputType="number"
             android:singleLine="true" />
@@ -215,11 +233,15 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/giorno"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginLeft="80dp"
             android:background="@drawable/et_style"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -238,9 +260,13 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/mese"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginLeft="80dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/et_style"
             android:inputType="numberDecimal" />
     </RelativeLayout>
@@ -261,9 +287,13 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/anno"
             android:layout_width="50dp"
             android:layout_height="30dp"
             android:layout_marginLeft="80dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="5dp"
             android:background="@drawable/et_style"
             android:inputType="numberDecimal" />
     </RelativeLayout>
