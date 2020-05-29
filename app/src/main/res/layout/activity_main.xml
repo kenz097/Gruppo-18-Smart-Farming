@@ -29,9 +29,9 @@
                 android:layout_marginLeft="100dp"
                 android:background="@drawable/et_style"
                 android:drawableTint="#FF4081"
-                android:paddingTop="8dp"
+                android:paddingTop="5dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:paddingBottom="5dp"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:singleLine="true" />
@@ -60,9 +60,9 @@
                 android:layout_marginLeft="100dp"
                 android:background="@drawable/et_style"
                 android:drawableTint="#FF4081"
-                android:paddingTop="8dp"
+                android:paddingTop="5dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:paddingBottom="5dp"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:singleLine="true" />

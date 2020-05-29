@@ -12,8 +12,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Raccolta extends AppCompatActivity {
     private EditText nome_prodotto;
@@ -21,8 +20,7 @@ public class Raccolta extends AppCompatActivity {
     private EditText quantita;
     private EditText numero_prodotti;
     private ListView list;
-    private ArrayAdapter<String> adapter;
-    private ArrayList<String> array;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +42,8 @@ public class Raccolta extends AppCompatActivity {
     }
     public void addProduct(View v){
 
-
-
-
-
+        ArrayAdapter<Quantita_Raccolta_Table> adapter= new ArrayAdapter<Quantita_Raccolta_Table>(this,R.layout.element_list_raccolta);
+        list.setAdapter(adapter);
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Inserimento quantità nel sistema");
         alert.setMessage("Quantità inserita correttamente nel sistema");
