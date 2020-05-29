@@ -17,8 +17,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/table"
-        android:layout_below="@+id/back"
-        android:stretchColumns="4">
+        android:layout_below="@+id/back">
         <TableRow android:background="@color/TableColor">
             <TextView
                 android:text="Prodotto"
@@ -26,7 +25,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textColor="#ffff"
-                android:gravity="left"
+                android:gravity="center"
                 />
             <View
                 android:layout_width="1dp"
@@ -65,6 +64,19 @@
                 android:layout_marginRight="10dp"
                 android:textColor="#ffff"
                 android:gravity="center"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#000000"/>
+            <TextView
+                android:text=""
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#ffff"
+                android:gravity="center"/>
+
         </TableRow>
 
         <ListView

@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 
 
 public class Raccolta extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class Raccolta extends AppCompatActivity {
     private EditText quantita;
     private EditText numero_prodotti;
     private ListView list;
-
+    private String el1, el2, el3, el4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,6 @@ public class Raccolta extends AppCompatActivity {
         numero_prodotti=(EditText)findViewById(R.id.numero_prodotti);
         list=(ListView)findViewById(R.id.list);
 
-
-
-
     }
     public void goBack(View view){
         Intent intent= new Intent(this, Homepage.class);
@@ -42,13 +40,21 @@ public class Raccolta extends AppCompatActivity {
     }
     public void addProduct(View v){
 
-        ArrayAdapter<Quantita_Raccolta_Table> adapter= new ArrayAdapter<Quantita_Raccolta_Table>(this,R.layout.element_list_raccolta);
-        list.setAdapter(adapter);
+        el1=nome_prodotto.getText().toString();
+        el2=posizione.getText().toString();
+        el3=quantita.getText().toString();
+        el4=numero_prodotti.getText().toString();
+
+        ArrayList<Quantita_Raccolta_Table> arrayList= new ArrayList<>();
+            arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3, el4));
+            CustomAdapterRaccolta custom = new CustomAdapterRaccolta(this, arrayList);
+            list.setAdapter(custom);
+
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Inserimento quantità nel sistema");
+
         alert.setMessage("Quantità inserita correttamente nel sistema");
         alert.show();
-
 
     }
 }

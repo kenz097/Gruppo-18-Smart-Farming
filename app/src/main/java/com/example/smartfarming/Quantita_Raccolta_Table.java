@@ -2,9 +2,9 @@ package com.example.smartfarming;
 
 public class Quantita_Raccolta_Table {
     private String nomeProdotto;
-    private int posizione;
-    private int quantita;
-    private int numProdotti;
+    private String posizione;
+    private String quantita;
+    private String numProdotti;
 
     public String getNomeProdotto(){
         return nomeProdotto;
@@ -12,25 +12,25 @@ public class Quantita_Raccolta_Table {
     public void setNomeProdotto(String nomeProdotto){
         this.nomeProdotto=nomeProdotto;
     }
-    public int getPosizione(){
+    public String getPosizione(){
         return posizione;
     }
-    public void setPosizione(int posizione){
+    public void setPosizione(String posizione){
         this.posizione=posizione;
     }
-    public int getQuantita(){
+    public String getQuantita(){
         return quantita;
     }
-    public void setQuantita(int quantita){
+    public void setQuantita(String quantita){
         this.quantita=quantita;
     }
-    public int getNumProdotti(){
+    public String getNumProdotti(){
         return numProdotti;
     }
-    public void setNumProdotti(int numProdotti){
+    public void setNumProdotti(String numProdotti){
         this.numProdotti=numProdotti;
     }
-    public Quantita_Raccolta_Table(String nomeProdotto, int posizione, int quantita, int numProdotti){
+    public Quantita_Raccolta_Table(String nomeProdotto, String posizione, String quantita, String numProdotti){
         this.nomeProdotto=nomeProdotto;
         this.posizione=posizione;
         this.quantita=quantita;
