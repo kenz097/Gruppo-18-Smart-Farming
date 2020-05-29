@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/row1"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_alignRight="@+id/view1"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:background="#000000"
+        android:id="@+id/view1"
+        />
+    <TextView
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/view2"
+        android:layout_toEndOf="@+id/row1"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="15sp" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="160dp"
+        android:background="#000000"
+        android:id="@+id/view2"
+        />
+
+    <ImageView
+        android:id="@+id/change"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/view2"
+        android:layout_marginLeft="59dp"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/change" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/view2"
+        android:layout_marginLeft="102dp"
+        android:src="@drawable/delete" />
+
+
+</RelativeLayout>
