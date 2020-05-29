@@ -14,7 +14,7 @@
 
 <LinearLayout
     android:id="@+id/primo"
-    android:layout_below="@id/backId"
+    android:layout_below="@id/back"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
