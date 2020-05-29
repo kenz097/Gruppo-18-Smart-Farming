@@ -1,5 +1,6 @@
 package com.example.smartfarming;
 
+import android.app.AlertDialog;
 import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,9 +15,17 @@ public class NuovoSolco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuovo_solco);
+        nomeSolco=(EditText)findViewById(R.id.solco);
+
     }
     public void goBack(View view){
-        Intent intent= new Intent(this, Homepage.class);
+        Intent intent= new Intent(this, DatiCampo.class);
         startActivity(intent);
+    }
+    public void addNewSolco(View v){
+        Intent in1=new Intent(this,DatiCampo2.class);
+        in1.putExtra("solco",nomeSolco.getText().toString());
+        startActivity(in1);
+
     }
 }
