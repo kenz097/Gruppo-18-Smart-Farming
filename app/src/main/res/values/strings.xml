@@ -4,4 +4,5 @@
     <string name="activityRegistrazione">Registrazione</string>
     <string name="activityRaccolta">Raccolta</string>
     <string name="activityHomepage">Homepage</string>
+    <String name="activityIrrigazione">Irrigazione</String>
 </resources>

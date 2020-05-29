@@ -15,12 +15,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Stoccaggio" android:label="@string/activityStoccaggio"></activity>
-        <activity android:name=".Homepage" android:label="@string/activityHomepage"></activity>
-        <activity android:name=".Raccolta" android:label="@string/activityRaccolta">
-
+        <activity android:name=".Stoccaggio" android:label="@string/activityStoccaggio">
         </activity>
-        <activity android:name=".Registrazione" android:label="@string/activityRegistrazione"></activity>
+        <activity android:name=".Homepage" android:label="@string/activityHomepage">
+        </activity>
+        <activity android:name=".Raccolta" android:label="@string/activityRaccolta">
+        </activity>
+        <activity android:name=".Registrazione" android:label="@string/activityRegistrazione">
+        </activity>
+        <activity android:name=".Irrigazione" android:label="@string/activityIrrigazione">
+        </activity>
     </application>
 
 </manifest>
