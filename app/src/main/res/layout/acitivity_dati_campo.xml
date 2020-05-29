@@ -14,7 +14,7 @@
         android:id="@+id/Datcam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/backId"
+        android:layout_below="@id/back"
         android:src="@drawable/daticampoimage"
         android:layout_centerHorizontal="true"
         />
