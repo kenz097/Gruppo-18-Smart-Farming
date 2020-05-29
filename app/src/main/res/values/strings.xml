@@ -5,4 +5,5 @@
     <string name="activityRaccolta">Raccolta</string>
     <string name="activityHomepage">Homepage</string>
     <string name="activityIrrigazione">Irrigazione</string>
+    <string name="googleMaps">google_maps_key</string>
 </resources>
