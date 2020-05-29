@@ -43,6 +43,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="10dp"/>
         <EditText
+            android:id="@+id/sendEmail"
             android:layout_width="220dp"
             android:layout_height="30dp"
             android:background="@drawable/et_style"
