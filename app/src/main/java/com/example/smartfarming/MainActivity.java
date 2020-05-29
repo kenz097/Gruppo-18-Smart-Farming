@@ -29,14 +29,31 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         smarrita = findViewById(R.id.smarrita);
+        smarrita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final AlertDialog.Builder builder=new AlertDialog.Builder(MainActivity.this);
+                View views=LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_layout,null);
+                builder.setPositiveButton("Conferma e-mail", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
+                    }
+                });
+                builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.setView(views);
+                builder.show();
+            }
+        });
 
     }
 
-    public void missPassword(View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //View v = LayoutInflater.from(this).inflate(R.layout.custom_layout, null);
-    }
+
 
 
     public void checkLogin(View view) {
