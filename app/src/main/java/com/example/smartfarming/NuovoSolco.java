@@ -1,5 +1,6 @@
 package com.example.smartfarming;
 
+import android.app.AlertDialog;
 import android.app.AppComponentFactory;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,5 +26,6 @@ public class NuovoSolco extends AppCompatActivity {
         Intent in1=new Intent(this,DatiCampo2.class);
         in1.putExtra("solco",nomeSolco.getText().toString());
         startActivity(in1);
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.smartfarming;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,10 @@ public class DatiCampo2 extends AppCompatActivity {
         arrayList.add(new Solco(str,"Profondità del solco: 40cm."));
     CustomAdapterDatiCampo custom=new CustomAdapterDatiCampo(this,arrayList);
         list.setAdapter(custom);
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Inserimento nuovo solco");
+        alert.setMessage("Nuovo solco inserito correttamente");
+        alert.show();
 
 }
     public void goBack(View view) {

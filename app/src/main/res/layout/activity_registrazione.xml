@@ -4,18 +4,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/backId"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+    <Button
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/back"
-        android:onClick="goLogin" />
+        android:onClick="goBack"
+        />
 
     <RelativeLayout
         android:id="@+id/firstRelative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/backId"
+        android:layout_below="@id/back"
         android:layout_marginTop="20dp">
 
         <TextView
