@@ -10,37 +10,54 @@
         android:background="@drawable/back"
         android:onClick="goBack" />
 
+<LinearLayout
+    android:id="@+id/primo"
+    android:layout_below="@id/backId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Nome solco :"
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"/>
 
     <EditText
         android:id="@+id/solco"
-        android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/backId"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/et_style"
         android:drawableTint="#FF4081"
-        android:hint="inserisci il nome del nuovo solco"
         android:importantForAutofill="no"
         android:singleLine="true"
-        android:layout_centerHorizontal="true"/>
-
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        />
+</LinearLayout>
     <TextView
             android:id="@+id/col_disp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="collega il nuovo dispositivo"
-            android:layout_below="@id/solco"
             android:paddingTop="30dp"
+            android:layout_below="@id/primo"
+            android:layout_marginTop="50dp"
             android:layout_centerHorizontal="true"
-            />
+            android:textColor="#000000"
+            android:textSize="18sp"/>
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/col_disp"
             android:text="inserisci dispositivo tramite bluetooth"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="80dp"
             android:background="@drawable/border_button"
             android:textAllCaps="false"
@@ -48,20 +65,28 @@
             android:textSize="18sp"
             android:layout_centerHorizontal="true"
         />
-
+     <TextView
+         android:id="@+id/text2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Nome del dispositivo acquisito:"
+         android:layout_below="@id/button1"
+         android:textSize="18sp"
+         android:textColor="#000000"
+         android:layout_marginTop="20dp"
+         android:layout_centerHorizontal="true"
+         />
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button1"
+        android:layout_below="@id/text2"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/border_button"
         android:text="Inserisci dispositivo nel sistema"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="18sp"
         android:layout_centerHorizontal="true"/>
-
-
 </RelativeLayout>

@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".Irrigazione" android:label="@string/activityIrrigazione">
         </activity>
+        <activity android:name=".DatiCampo" android:label="@string/activityDatiCampo">
+        </activity>
     </application>
 
 </manifest>
