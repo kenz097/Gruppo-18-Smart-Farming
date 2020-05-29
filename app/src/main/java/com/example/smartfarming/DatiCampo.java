@@ -12,25 +12,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatiCampo extends AppCompatActivity {
-    private EditText solco;
-    private String st1;
     private ListView list;
+    private String st1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitivity_dati_campo);
-        solco=(EditText)findViewById(R.id.solco);
-        list=(ListView)findViewById(R.id.list1);
-        ArrayList<Solco> arrayList= new ArrayList<>();
-        st1=solco.getText().toString();
-        arrayList.add(new Solco(st1,"profondita del solco : 40cm"));
-        CustomAdapterDatiCampo custom =new CustomAdapterDatiCampo(this,arrayList);
-        list.setAdapter(custom);
+        list=(ListView)findViewById(R.id.list);
+
+
+
     }
     public void goBack(View view) {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void addSolco(View v){
+        Intent intent=new Intent(this,NuovoSolco.class);
         startActivity(intent);
     }
 

@@ -16,13 +16,26 @@
         android:src="@drawable/daticampoimage"
         android:layout_centerHorizontal="true"
         />
-        <ListView
-            android:id="@+id/list1"
-            android:layout_width="wrap_content"
-            android:layout_height="103dp"
-            android:layout_marginTop="50dp"
-            android:layout_below="@id/Datcam">
 
-        </ListView>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_below="@id/Datcam"
+        android:layout_marginTop="50dp">
+    </ListView>
+    <Button
+        android:id="@+id/inserisciProdotto"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/list"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_button"
+        android:onClick="addSolco"
+        android:text="Inserisci nuovo solco"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
 
 </RelativeLayout>
