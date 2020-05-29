@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">Smart Farming</string>
+    <string name="activityMain">Login</string>
     <string name="activityStoccaggio">Stoccaggio</string>
     <string name="activityRegistrazione">Registrazione</string>
     <string name="activityRaccolta">Raccolta</string>
     <string name="activityHomepage">Homepage</string>
     <string name="activityIrrigazione">Irrigazione</string>
-    <string name="googleMaps">google_maps_key</string>
+    <string name="google_maps_key">google_maps_key</string>
 </resources>
