@@ -1,6 +1,8 @@
 package com.example.smartfarming;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 
 import androidx.fragment.app.FragmentActivity;
@@ -23,6 +25,10 @@ public class Irrigazione extends FragmentActivity implements OnMapReadyCallback 
 
         SupportMapFragment mapFragment=(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+    public void goBack(View view){
+        Intent intent= new Intent(this, Homepage.class);
+        startActivity(intent);
     }
 
     @Override
