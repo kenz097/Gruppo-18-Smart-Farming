@@ -35,9 +35,7 @@ public class Raccolta extends AppCompatActivity {
         list=(ListView)findViewById(R.id.list);
 
 
-        array= new ArrayList<>();
-        adapter=new ArrayAdapter<String>(this,R.layout.element_list_raccolta,array);
-        list.setAdapter(adapter);
+
 
     }
     public void goBack(View view){
@@ -46,8 +44,8 @@ public class Raccolta extends AppCompatActivity {
     }
     public void addProduct(View v){
 
-        String nameProduct= nome_prodotto.getText().toString();
-        String position=posizione.getText().toString();
+
+
 
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
