@@ -10,20 +10,18 @@
         android:background="@drawable/back"
         android:onClick="goBack"
         />
-    <ImageView
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:id="@+id/Datcam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/back"
-        android:src="@drawable/daticampoimage"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/back"
         />
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:layout_below="@id/Datcam"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="20dp">
     </ListView>
     <Button
         android:id="@+id/inserisciProdotto"
@@ -34,6 +32,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/border_button"
         android:onClick="addSolco"
+        android:layout_marginTop="20dp"
         android:text="Inserisci nuovo solco"
         android:textAllCaps="false"
         android:textColor="#fff"
