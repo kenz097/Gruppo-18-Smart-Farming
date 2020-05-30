@@ -34,7 +34,7 @@
                 android:onClick="goDatiCampo"
                 android:background="@drawable/edit_element_style"
                 android:text="Dati campo"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/semina"
@@ -45,7 +45,7 @@
                 android:layout_toRightOf="@id/datiCampo"
                 android:background="@drawable/edit_element_style"
                 android:text="Semina"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </RelativeLayout>
 
@@ -64,7 +64,7 @@
                 android:onClick="goStoccaggio"
                 android:background="@drawable/edit_element_style"
                 android:text="Stoccaggio"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/irrigazione"
@@ -75,7 +75,7 @@
                 android:layout_toRightOf="@id/stoccaggio"
                 android:background="@drawable/edit_element_style"
                 android:text="Irrigazione"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
         </RelativeLayout>
 
@@ -94,7 +94,7 @@
                 android:onClick="goRaccolta"
                 android:background="@drawable/edit_element_style"
                 android:text="Raccolta"
-                android:textSize="20sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:layout_width="wrap_content"
