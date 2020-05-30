@@ -1,7 +1,6 @@
 package com.example.smartfarming;
 
-import android.app.AlertDialog;
-import android.app.AppComponentFactory;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +19,15 @@ public class NuovoSolco extends AppCompatActivity {
     }
     public void goBack(View view){
         Intent intent= new Intent(this, DatiCampo.class);
+        startActivity(intent);
+    }
+    public void addNewDispositive(View v){
+        Intent intent = new Intent(Intent.ACTION_MAIN, null);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        ComponentName cn = new ComponentName("com.android.settings",
+                "com.android.settings.bluetoothSettings");
+        intent.setComponent(cn);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
     public void addNewSolco(View v){

@@ -15,7 +15,7 @@ public class DatiCampo2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-    setContentView(R.layout.acitivity_dati_campo);
+    setContentView(R.layout.activity_dati_campo);
     list=(ListView)findViewById(R.id.list);
 
     Bundle b1 = getIntent().getExtras();

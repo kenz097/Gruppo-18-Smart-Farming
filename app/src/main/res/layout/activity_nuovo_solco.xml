@@ -66,6 +66,7 @@
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp"
+            android:onClick="addNewDispositive"
             android:layout_centerHorizontal="true"
         />
      <TextView
