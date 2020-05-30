@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".DatiCampo2" android:label="@string/activityDatiCampo">
         </activity>
+        <activity android:name=".Semina" android:label="@string/activitySemina">
+        </activity>
     </application>
 
 </manifest>
