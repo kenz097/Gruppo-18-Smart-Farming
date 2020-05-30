@@ -26,7 +26,7 @@ public class DatiCampo extends AppCompatActivity {
 
     }
     public void goBack(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Homepage.class);
         startActivity(intent);
     }
     public void addSolco(View v){
