@@ -17,6 +17,147 @@
         android:layout_marginRight="10dp"
         android:id="@+id/map"
         android:layout_below="@+id/back"
-        android:name="com.google.android.gms.maps.SupportMapFragment"></fragment>
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/map"
+        android:background="#000000"
+        android:layout_marginTop="30dp"
+        android:id="@+id/view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear1"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:id="@+id/image1"
+            android:src="@drawable/red_p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Campo 1"
+            android:textColor="#000000"
+            android:id="@+id/text_campo1"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:entries="@array/trattamento"
+            android:id="@+id/scelta1"
+            android:padding="15dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:backgroundTint="#4CAF50"
+            android:text="Avvia"
+            android:onClick="play1"
+            android:id="@+id/button_campo1"
+            android:textColor="#ffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear1"
+        android:id="@+id/linear2"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:id="@+id/image2"
+            android:src="@drawable/red_p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Campo 2"
+            android:textColor="#000000"
+            android:id="@+id/text_campo2"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:entries="@array/trattamento"
+            android:id="@+id/scelta2"
+            android:padding="15dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:backgroundTint="#4CAF50"
+            android:text="Avvia"
+            android:onClick="play2"
+            android:id="@+id/button_campo2"
+            android:textColor="#ffff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear2"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:id="@+id/image3"
+            android:src="@drawable/red_p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Campo 3"
+            android:id="@+id/text_campo3"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:entries="@array/trattamento"
+            android:id="@+id/scelta3"
+            android:padding="15dp" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/spinner_style"
+            android:backgroundTint="#4CAF50"
+            android:text="Avvia"
+            android:onClick="play3"
+            android:id="@+id/button_campo3"
+            android:textColor="#ffff"/>
+    </LinearLayout>
 
 </RelativeLayout>
