@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="trattamento">
+    <item>Irrigazione</item>
+    <item>Fitofarmaci</item>
+    <item>Concimazione</item>
+</string-array>
+</resources>
