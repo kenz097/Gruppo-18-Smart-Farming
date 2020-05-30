@@ -8,11 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.ConcurrentModificationException;
 
 public class CustomAdapterSemina extends BaseAdapter {
-    private ArrayList<Profotti_Semina_Table1> arrayList;
-    private Context context;
+    ArrayList<Prodotti_Semina_Table1> arrayList;
+    Context context;
+
+    public CustomAdapterSemina(Context context, ArrayList<Prodotti_Semina_Table1> arrayList) {
+        this.arrayList=arrayList;
+        this.context=context;
+    }
+
     @Override
     public int getCount() {
         return arrayList.size();

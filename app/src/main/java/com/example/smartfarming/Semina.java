@@ -7,6 +7,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class Semina extends AppCompatActivity {
     private ListView list;
     private String st1;
@@ -17,7 +19,10 @@ public class Semina extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_semina);
         list=(ListView)findViewById(R.id.list2);
-
+        ArrayList<Prodotti_Semina_Table1> arrayList= new ArrayList<>();
+        arrayList.add(new Prodotti_Semina_Table1("Lattuga","70%"));
+        CustomAdapterSemina custom=new CustomAdapterSemina(this,arrayList);
+        list.setAdapter(custom);
 
 
     }

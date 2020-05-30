@@ -1,6 +1,6 @@
 package com.example.smartfarming;
 
-public class Profotti_Semina_Table1 {
+public class Prodotti_Semina_Table1 {
     private String nomeProdotto;
     private String percentuale;
 
@@ -19,7 +19,7 @@ public class Profotti_Semina_Table1 {
     public void setPercentuale(String percentuale) {
         this.percentuale = percentuale;
     }
-    public Profotti_Semina_Table1(String nomeProdotto,String percentuale){
+    public Prodotti_Semina_Table1(String nomeProdotto, String percentuale){
         this.nomeProdotto=nomeProdotto;
         this.percentuale=percentuale;
     }
