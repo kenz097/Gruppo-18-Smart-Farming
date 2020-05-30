@@ -32,11 +32,11 @@ public class Homepage extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Irrigazione.class);
         startActivity(intent);
     }
-    /*
+
     public void goSemina(View view) {
         Intent intent = new Intent(getApplicationContext(), Semina.class);
         startActivity(intent);
-    }*/
+    }
 
     public void goDatiCampo(View view) {
         Intent intent = new Intent(getApplicationContext(), DatiCampo.class);

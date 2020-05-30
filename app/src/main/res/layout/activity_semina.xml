@@ -61,7 +61,7 @@
             android:gravity="right"/>
     </TableRow>
         <ListView
-            android:id="@+id/list2"
+            android:id="@+id/list"
             android:layout_width="wrap_content"
             android:layout_height="157dp"
             android:layout_below="@id/text1">
@@ -72,10 +72,10 @@
         android:id="@+id/Sem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/back"
+        android:layout_below="@id/lineare1"
         android:src="@drawable/lattuga"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="20dp"
         android:paddingTop="10dp"
         />
 </RelativeLayout>

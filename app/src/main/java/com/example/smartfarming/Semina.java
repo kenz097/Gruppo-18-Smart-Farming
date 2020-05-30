@@ -18,7 +18,7 @@ public class Semina extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_semina);
-        list=(ListView)findViewById(R.id.list2);
+        list=(ListView)findViewById(R.id.list);
         ArrayList<Prodotti_Semina_Table1> arrayList= new ArrayList<>();
         arrayList.add(new Prodotti_Semina_Table1("Lattuga","70%"));
         CustomAdapterSemina custom=new CustomAdapterSemina(this,arrayList);
@@ -27,7 +27,7 @@ public class Semina extends AppCompatActivity {
 
     }
     public void goBack(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Homepage.class);
         startActivity(intent);
     }
 
