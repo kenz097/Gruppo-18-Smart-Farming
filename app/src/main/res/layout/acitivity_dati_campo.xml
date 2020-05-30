@@ -3,16 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-<<<<<<< HEAD
-        android:id="@+id/backId"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-=======
         android:id="@+id/back"
         android:layout_width="80dp"
         android:layout_height="61dp"
         android:layout_marginStart="10dp"
->>>>>>> 958cc2b960d89361cd42d0b5658f9b7ef0d5d130
         android:background="@drawable/back"
         android:onClick="goBack"
         />
@@ -24,16 +18,6 @@
         android:src="@drawable/daticampoimage"
         android:layout_centerHorizontal="true"
         />
-<<<<<<< HEAD
-        <ListView
-            android:id="@+id/list1"
-            android:layout_width="wrap_content"
-            android:layout_height="103dp"
-            android:layout_marginTop="50dp"
-            android:layout_below="@id/Datcam">
-        </ListView>
-=======
-
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
@@ -54,6 +38,4 @@
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="18sp" />
->>>>>>> 958cc2b960d89361cd42d0b5658f9b7ef0d5d130
-
 </RelativeLayout>
