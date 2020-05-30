@@ -20,6 +20,10 @@ public class Semina extends AppCompatActivity {
         setContentView(R.layout.activity_semina);
         list=(ListView)findViewById(R.id.list);
         ArrayList<Prodotti_Semina_Table1> arrayList= new ArrayList<>();
+        arrayList.add(new Prodotti_Semina_Table1("Pomodori","30%"));
+        arrayList.add(new Prodotti_Semina_Table1("Fagioli","50%"));
+        arrayList.add(new Prodotti_Semina_Table1("Patate","30%"));
+        arrayList.add(new Prodotti_Semina_Table1("Zucchine","45%"));
         arrayList.add(new Prodotti_Semina_Table1("Lattuga","70%"));
         CustomAdapterSemina custom=new CustomAdapterSemina(this,arrayList);
         list.setAdapter(custom);
