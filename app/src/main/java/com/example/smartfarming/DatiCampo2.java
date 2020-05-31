@@ -83,6 +83,9 @@ public class DatiCampo2 extends AppCompatActivity {
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Argilla",20));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Limo",40));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ferro",80));
+            arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ghiaia", 35));
+            arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Silicio", 23));
+
         }
 
     public void goBack(View view) {
