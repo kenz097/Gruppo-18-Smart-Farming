@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,10 +22,13 @@ import java.util.ArrayList;
 
 public class DatiCampo2 extends AppCompatActivity {
     private ListView list;
+    private ImageView cestino;
     BarChart barChart;
     ArrayList<Materiali_Grafici_DatiCampo> arrayMaterialiGraficiDatiCampo = new ArrayList<>();
     ArrayList<String> tipo= new ArrayList<>();
     ArrayList<BarEntry> barEntries = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
@@ -73,8 +77,11 @@ public class DatiCampo2 extends AppCompatActivity {
             barChart.setDragEnabled(true);
             barChart.getDescription().setText("Materiali_Grafici_DatiCampo all'interno del terreno");
             barChart.animateY(2000);
-
             barChart.invalidate();
+
+            setContentView(R.layout.element_list_daticampo);
+            cestino=(ImageView)findViewById(R.id.delete);
+
         }
         private void fillMateriali(){
             arrayMaterialiGraficiDatiCampo.clear();
@@ -85,7 +92,6 @@ public class DatiCampo2 extends AppCompatActivity {
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ferro",80));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ghiaia", 35));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Silicio", 23));
-
         }
 
     public void goBack(View view) {

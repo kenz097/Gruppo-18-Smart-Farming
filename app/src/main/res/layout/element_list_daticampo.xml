@@ -55,6 +55,7 @@
         android:layout_height="20dp"
         android:layout_alignLeft="@+id/view2"
         android:layout_marginLeft="59dp"
+        android:onClick="deleteItem"
         android:src="@drawable/delete" />
 
 
