@@ -80,12 +80,14 @@
         android:layout_alignLeft="@+id/view3"
         android:layout_marginLeft="59dp"
         android:layout_marginRight="30dp"
+        android:onClick="deleteItem"
         android:src="@drawable/change" />
 
     <ImageView
         android:id="@+id/delete"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:onClick="modItem"
         android:layout_alignLeft="@+id/view3"
         android:layout_marginLeft="102dp"
         android:src="@drawable/delete" />

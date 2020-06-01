@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 public class DatiCampo2 extends AppCompatActivity {
     private ListView list;
-    private ImageView cestino;
+
     BarChart barChart;
     ArrayList<Solco> arrayList;
     ArrayList<Materiali_Grafici_DatiCampo> arrayMaterialiGraficiDatiCampo = new ArrayList<>();
@@ -45,10 +45,6 @@ public class DatiCampo2 extends AppCompatActivity {
     CustomAdapterDatiCampo custom=new CustomAdapterDatiCampo(this,arrayList);
         list.setAdapter(custom);
 
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Inserimento nuovo solco");
-        alert.setMessage("Nuovo solco inserito correttamente");
-        alert.show();
 
         barChart=(BarChart)findViewById(R.id.Datcam);
 
@@ -96,9 +92,12 @@ public class DatiCampo2 extends AppCompatActivity {
         }
 
         public void deleteItem(View v){
-            setContentView(R.layout.element_list_daticampo);
-            Solco str=arrayList.get(0);
-                arrayList.remove(str);
+            Intent intent= new Intent(this, DatiCampo.class);
+            startActivity(intent);
+        }
+        public void modItem(View v){
+            Intent intent= new Intent(this,NuovoSolco.class);
+            startActivity(intent);
         }
 
     public void goBack(View view) {

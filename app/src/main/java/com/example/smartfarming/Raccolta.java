@@ -75,5 +75,14 @@ public class Raccolta extends AppCompatActivity {
             list.setAdapter(custom);
 
         }
+
+    }
+    public void deleteItem(View v){
+        Intent intent= new Intent(this, Raccolta.class);
+        startActivity(intent);
+    }
+    public void modItem(View v){
+        Intent intent= new Intent(this,Raccolta.class);
+        startActivity(intent);
     }
 }
