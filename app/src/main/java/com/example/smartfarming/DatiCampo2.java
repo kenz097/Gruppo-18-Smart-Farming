@@ -24,6 +24,7 @@ public class DatiCampo2 extends AppCompatActivity {
     private ListView list;
     private ImageView cestino;
     BarChart barChart;
+    ArrayList<Solco> arrayList;
     ArrayList<Materiali_Grafici_DatiCampo> arrayMaterialiGraficiDatiCampo = new ArrayList<>();
     ArrayList<String> tipo= new ArrayList<>();
     ArrayList<BarEntry> barEntries = new ArrayList<>();
@@ -43,6 +44,7 @@ public class DatiCampo2 extends AppCompatActivity {
         arrayList.add(new Solco(str,"Profondità del solco: 40cm."));
     CustomAdapterDatiCampo custom=new CustomAdapterDatiCampo(this,arrayList);
         list.setAdapter(custom);
+
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Inserimento nuovo solco");
         alert.setMessage("Nuovo solco inserito correttamente");
@@ -79,8 +81,7 @@ public class DatiCampo2 extends AppCompatActivity {
             barChart.animateY(2000);
             barChart.invalidate();
 
-            setContentView(R.layout.element_list_daticampo);
-            cestino=(ImageView)findViewById(R.id.delete);
+
 
         }
         private void fillMateriali(){
@@ -92,6 +93,12 @@ public class DatiCampo2 extends AppCompatActivity {
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ferro",80));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Ghiaia", 35));
             arrayMaterialiGraficiDatiCampo.add(new Materiali_Grafici_DatiCampo("Silicio", 23));
+        }
+
+        public void deleteItem(View v){
+            setContentView(R.layout.element_list_daticampo);
+            Solco str=arrayList.get(0);
+                arrayList.remove(str);
         }
 
     public void goBack(View view) {
