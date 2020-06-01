@@ -48,6 +48,7 @@
             android:layout_height="30dp"
             android:background="@drawable/et_style"
             android:layout_marginLeft="150dp"
+            android:inputType="textEmailAddress"
             />
     </RelativeLayout>
 
