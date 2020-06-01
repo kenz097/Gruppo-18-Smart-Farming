@@ -11,4 +11,5 @@
     <string name="activityNomeSolco">NuovoSolco</string>
     <string name="activityDatiCampo2">DatiCampo2</string>
     <string name="activitySemina">Semina</string>
+    <string name="activityNuovoCampo">NuovoCampo</string>
 </resources>

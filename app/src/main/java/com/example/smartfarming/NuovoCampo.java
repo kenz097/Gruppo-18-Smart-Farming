@@ -13,18 +13,18 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NuovoSolco extends AppCompatActivity {
-    private EditText nomeSolco;
+public class NuovoCampo extends AppCompatActivity {
+    private EditText nomeCampo;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nuovo_solco);
-        nomeSolco = findViewById(R.id.solco);
+        setContentView(R.layout.activity_nuovo_campo);
+        nomeCampo = findViewById(R.id.campo);
 
     }
 
     public void goBack(View view) {
-        Intent intent = new Intent(this, DatiCampo.class);
+        Intent intent = new Intent(this, Irrigazione.class);
         startActivity(intent);
     }
 
@@ -38,12 +38,12 @@ public class NuovoSolco extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void addNewSolco(View v) {
-        if (nomeSolco.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(NuovoSolco.this, "Inserisci il nome del dispositivo", Toast.LENGTH_LONG).show();
+    public void addNuovoValore(View v) {
+        if (nomeCampo.getText().toString().equalsIgnoreCase("")) {
+            Toast.makeText(NuovoCampo.this, "Inserisci il nome del dispositivo", Toast.LENGTH_LONG).show();
         } else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(NuovoSolco.this);
-            final View views = LayoutInflater.from(NuovoSolco.this).inflate(R.layout.form_done, null);
+            AlertDialog.Builder builder = new AlertDialog.Builder(NuovoCampo.this);
+            final View views = LayoutInflater.from(NuovoCampo.this).inflate(R.layout.form_done, null);
             TextView title = views.findViewById(R.id.title_add);
             TextView body = views.findViewById(R.id.full_text);
             title.setText("Inserimento dispositivo nel sistema");
@@ -53,8 +53,8 @@ public class NuovoSolco extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent in1 = new Intent(getApplicationContext(), DatiCampo2.class);
-                    in1.putExtra("solco", nomeSolco.getText().toString());
+                    Intent in1 = new Intent(getApplicationContext(), Irrigazione.class);
+                    in1.putExtra("campo", nomeCampo.getText().toString());
                     startActivity(in1);
                 }
             }, 3000);

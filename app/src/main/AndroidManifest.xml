@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".Semina" android:label="@string/activitySemina">
         </activity>
+        <activity android:name=".NuovoCampo" android:label="@string/activityNuovoCampo">
+        </activity>
     </application>
 
 </manifest>

@@ -102,4 +102,9 @@ public class Irrigazione extends FragmentActivity implements OnMapReadyCallback 
             image3.setImageResource(R.drawable.red_p);
         }
     }
+
+    public void addNewCampo(View view) {
+        Intent intent = new Intent(getApplicationContext(), NuovoCampo.class);
+        startActivity(intent);
+    }
 }
