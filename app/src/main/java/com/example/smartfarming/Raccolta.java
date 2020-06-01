@@ -9,6 +9,7 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,6 +39,7 @@ public class Raccolta extends AppCompatActivity {
         Intent intent= new Intent(this, Homepage.class);
         startActivity(intent);
     }
+
     public void addProduct(View v){
 
         el1=nome_prodotto.getText().toString();
@@ -45,16 +47,24 @@ public class Raccolta extends AppCompatActivity {
         el3=quantita.getText().toString();
         el4=numero_prodotti.getText().toString();
 
-        ArrayList<Quantita_Raccolta_Table> arrayList= new ArrayList<>();
+        if (el1.equalsIgnoreCase("")) {
+            Toast.makeText(Raccolta.this, "Hai dimenticato il nome del prodotto", Toast.LENGTH_LONG).show();
+        } else if(el2.equalsIgnoreCase("")){
+            Toast.makeText(Raccolta.this, "Hai dimenticato la posizione del prodotto", Toast.LENGTH_LONG).show();
+        }else if(el3.equalsIgnoreCase("")){
+            Toast.makeText(Raccolta.this, "Hai dimenticato la quantita' del prodotto", Toast.LENGTH_LONG).show();
+        }else if(el4.equalsIgnoreCase("")){
+            Toast.makeText(Raccolta.this, "Hai dimenticato il numero del prodotto", Toast.LENGTH_LONG).show();
+        }else {
+            ArrayList<Quantita_Raccolta_Table> arrayList = new ArrayList<>();
             arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3, el4));
             CustomAdapterRaccolta custom = new CustomAdapterRaccolta(this, arrayList);
             list.setAdapter(custom);
 
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setTitle("Inserimento quantità nel sistema");
-
-        alert.setMessage("Quantità inserita correttamente nel sistema");
-        alert.show();
-
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Inserimento quantità nel sistema");
+            alert.setMessage("Quantità inserita correttamente nel sistema");
+            alert.show();
+        }
     }
 }
