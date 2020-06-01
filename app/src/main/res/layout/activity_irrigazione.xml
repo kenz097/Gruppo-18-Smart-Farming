@@ -178,7 +178,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/border_button"
             android:onClick="addNewCampo"
-            android:text="Inserisci dispositivo nel sistema"
+            android:text="Inserisci un nuovo campo"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />
