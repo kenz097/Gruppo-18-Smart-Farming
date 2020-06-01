@@ -70,7 +70,7 @@ public class Raccolta extends AppCompatActivity {
             builder.show();
 
             ArrayList<Quantita_Raccolta_Table> arrayList = new ArrayList<>();
-            arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3, el4));
+            arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3+"kg", el4));
             CustomAdapterRaccolta custom = new CustomAdapterRaccolta(this, arrayList);
             list.setAdapter(custom);
 
