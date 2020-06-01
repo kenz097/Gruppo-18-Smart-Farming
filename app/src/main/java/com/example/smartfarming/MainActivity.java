@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 final View views = LayoutInflater.from(MainActivity.this).inflate(R.layout.custom_layout, null);
-                sendEmail =views.findViewById(R.id.sendEmail);
+                sendEmail = views.findViewById(R.id.sendEmail);
                 builder.setPositiveButton("Conferma e-mail", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -46,14 +47,28 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-                builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+                builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
                 });
+
                 builder.setView(views);
-                builder.show();
+                AlertDialog dialog = builder.create();
+
+                // Finally, display the alert dialog
+                dialog.show();
+
+                // Get the alert dialog buttons reference
+                Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+
+                // Change the alert dialog buttons text and background color
+                positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+                positiveButton.setBackgroundResource(R.drawable.border_button);
+                neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+                neutralButton.setBackgroundResource(R.drawable.border_button);
             }
         });
 
