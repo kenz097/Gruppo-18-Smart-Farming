@@ -1,16 +1,21 @@
 package com.example.smartfarming;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Homepage extends AppCompatActivity {
+    private TextView logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+        logout=findViewById(R.id.logout);
+        logout.setPaintFlags(logout.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
     }
 
     public void goRaccolta(View view) {
