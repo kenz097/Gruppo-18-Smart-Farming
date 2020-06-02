@@ -57,7 +57,7 @@ public class NuovoSolco extends AppCompatActivity {
                     in1.putExtra("solco", nomeSolco.getText().toString());
                     startActivity(in1);
                 }
-            }, 3000);
+            }, 2000);
 
         }
     }

@@ -57,7 +57,7 @@ public class NuovoCampo extends AppCompatActivity {
                     in1.putExtra("campo", nomeCampo.getText().toString());
                     startActivity(in1);
                 }
-            }, 3000);
+            }, 2000);
 
         }
     }

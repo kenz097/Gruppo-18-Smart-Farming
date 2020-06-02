@@ -104,6 +104,7 @@ public class DatiCampo2 extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(DatiCampo2.this, DatiCampo.class);
                 startActivity(intent);
+                Toast.makeText(DatiCampo2.this, "Prodotto eliminato con successo", Toast.LENGTH_LONG).show();
             }
         });
         builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {

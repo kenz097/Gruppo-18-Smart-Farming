@@ -95,6 +95,7 @@ public class Raccolta extends AppCompatActivity {
                 arrayList.remove(0);
                 CustomAdapterRaccolta custom = new CustomAdapterRaccolta(Raccolta.this, arrayList);
                 list.setAdapter(custom);
+                Toast.makeText(Raccolta.this, "Prodotto eliminato con successo", Toast.LENGTH_LONG).show();
             }
         });
         builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {
@@ -116,7 +117,6 @@ public class Raccolta extends AppCompatActivity {
         positiveButton.setBackgroundResource(R.drawable.border_button);
         neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
         neutralButton.setBackgroundResource(R.drawable.border_button);
-        Toast.makeText(Raccolta.this,"Prodotto eliminato con successo",Toast.LENGTH_LONG).show();
     }
 
     public void modItem(View v) {
