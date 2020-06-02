@@ -34,7 +34,7 @@ public class CustomAdapterIrrigazione extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView= LayoutInflater.from(context).inflate(R.layout.element_list_irrigazione,parent,false);
-        TextView nomeCampo= convertView.findViewById(R.id.nomeCampo);
+        TextView nomeCampo= convertView.findViewById(R.id.text_campo2);
         nomeCampo.setText(arrayList.get(position).getNomeCampo());
         return convertView;
     }

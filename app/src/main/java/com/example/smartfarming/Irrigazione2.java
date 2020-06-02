@@ -29,7 +29,7 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
     private ImageView image1,image2;
     private ListView list;
     private GoogleMap mMap;
-    private TextView nomeCampo;
+    private TextView nomeCampo,nomeCampo2;
     private String str;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,6 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
         image1=(ImageView)findViewById(R.id.image1);
         list=(ListView)findViewById(R.id.list);
         nomeCampo=(TextView)findViewById(R.id.text_campo1);
-
 
         SupportMapFragment mapFragment=(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -79,7 +78,7 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
             spinner1.setEnabled(true);
             b1.setBackgroundTintList(ColorStateList.valueOf(greenColor));
             image1.setImageResource(R.drawable.red_p);
-            b2.setText("Collega");
+
         }
     }
 
@@ -87,32 +86,15 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
         spinner2=(Spinner)findViewById(R.id.scelta);
         image2=(ImageView)findViewById(R.id.image2);
         b2=(Button)findViewById(R.id.button_newCamp);
-        int greenColor= Color.parseColor("#FF4CAF50");
-        if(b2.getText()=="Collega"){
-            b1.setEnabled(true);
-            b2.setText("Avvia");
-            spinner2.setEnabled(false);
-            spinner1.setEnabled(true);
-            b2.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-            image2.setImageResource(R.drawable.green_p);
-            b1.setText("Collega");
-            b1.setBackgroundTintList(ColorStateList.valueOf(greenColor));
-        }else if(b2.getText()=="Avvia"){
-            b2.setText("Avvia");
-            spinner2.setEnabled(true);
-            spinner1.setEnabled(false);
-            b2.setBackgroundTintList(ColorStateList.valueOf(greenColor));
-            image2.setImageResource(R.drawable.red_p);
-            b1.setText("Collega");
-            b1.setBackgroundTintList(ColorStateList.valueOf(greenColor));
+        nomeCampo2=(TextView)findViewById(R.id.text_campo2);
 
+        int greenColor= Color.parseColor("#FF4CAF50");
+        if(nomeCampo.getText()!=str){
+            nomeCampo.setText(str);
+            nomeCampo2.setText("Campo1");
         }else{
-            b2.setText("Pause");
-            spinner2.setEnabled(false);
-            b2.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-            image2.setImageResource(R.drawable.green_p);
-            b1.setText("Collega");
-            b1.setBackgroundTintList(ColorStateList.valueOf(greenColor));
+            nomeCampo.setText("Campo1");
+           nomeCampo2.setText(str);
         }
     }
 }
