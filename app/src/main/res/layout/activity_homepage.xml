@@ -105,7 +105,9 @@
                 android:onClick="goLogout"
                 android:text="Esci dall'account"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:id="@+id/logout"
+                />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

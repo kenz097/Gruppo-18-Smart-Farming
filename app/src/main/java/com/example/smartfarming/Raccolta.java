@@ -3,11 +3,13 @@ package com.example.smartfarming;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -26,6 +28,7 @@ public class Raccolta extends AppCompatActivity {
     private EditText numero_prodotti;
     private ListView list;
     private String el1, el2, el3, el4;
+    private ArrayList<Quantita_Raccolta_Table> arrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,20 +72,57 @@ public class Raccolta extends AppCompatActivity {
             builder.setView(views);
             builder.show();
 
-            ArrayList<Quantita_Raccolta_Table> arrayList = new ArrayList<>();
-            arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3+"kg", el4));
+            arrayList = new ArrayList<>();
+            arrayList.add(new Quantita_Raccolta_Table(el1, el2, el3 + "kg", el4));
             CustomAdapterRaccolta custom = new CustomAdapterRaccolta(this, arrayList);
             list.setAdapter(custom);
+            nome_prodotto.setText("");
+            posizione.setText("");
+            quantita.setText("");
+            numero_prodotti.setText("");
 
         }
 
     }
-    public void deleteItem(View v){
-        Intent intent= new Intent(this, Raccolta.class);
-        startActivity(intent);
+
+    public void deleteItem(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Raccolta.this);
+        builder.setTitle("Cancellazione prodotto");
+        builder.setMessage("Sei sicuro di voler eliminare il prodotto?");
+        builder.setPositiveButton("Elimina prodotto", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                arrayList.remove(0);
+                CustomAdapterRaccolta custom = new CustomAdapterRaccolta(Raccolta.this, arrayList);
+                list.setAdapter(custom);
+            }
+        });
+        builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+
+        // Finally, display the alert dialog
+        dialog.show();
+
+        // Get the alert dialog buttons reference
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+
+        // Change the alert dialog buttons text and background color
+        positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+        positiveButton.setBackgroundResource(R.drawable.border_button);
+        neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+        neutralButton.setBackgroundResource(R.drawable.border_button);
     }
-    public void modItem(View v){
-        Intent intent= new Intent(this,Raccolta.class);
-        startActivity(intent);
+
+    public void modItem(View v) {
+        nome_prodotto.setText(el1);
+        posizione.setText(el2);
+        quantita.setText(el3);
+        numero_prodotti.setText(el4);
+        Toast.makeText(Raccolta.this, "Modifica i parametri del prodotto", Toast.LENGTH_LONG).show();
     }
 }
