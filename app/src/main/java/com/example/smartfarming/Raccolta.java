@@ -116,6 +116,7 @@ public class Raccolta extends AppCompatActivity {
         positiveButton.setBackgroundResource(R.drawable.border_button);
         neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
         neutralButton.setBackgroundResource(R.drawable.border_button);
+        Toast.makeText(Raccolta.this,"Prodotto eliminato con successo",Toast.LENGTH_LONG).show();
     }
 
     public void modItem(View v) {
