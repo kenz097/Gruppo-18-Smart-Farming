@@ -23,9 +23,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.ArrayList;
 
 public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback {
-    private Button b1;
-    private Spinner spinner1;
-    private ImageView image1;
+    private Button b1,b2;
+    private Spinner spinner1,spinner2;
+    private ImageView image1,image2;
     private ListView list;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,9 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
         spinner1=(Spinner)findViewById(R.id.scelta1);
         image1=(ImageView)findViewById(R.id.image1);
         list=(ListView)findViewById(R.id.list);
+        b2=(Button)findViewById(R.id.button_newCamp);
+        spinner2=(Spinner)findViewById(R.id.scelta);
+        image2=(ImageView)findViewById(R.id.image2);
 
         SupportMapFragment mapFragment=(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -72,6 +75,22 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
             spinner1.setEnabled(true);
             b1.setBackgroundTintList(ColorStateList.valueOf(greenColor));
             image1.setImageResource(R.drawable.red_p);
+        }
+    }
+
+    public void newLink(View v){
+        setContentView(R.layout.element_list_irrigazione);
+        int greenColor= Color.parseColor("#FF4CAF50");
+        if(b2.getText()=="Collega") {
+            b2.setText("Avvia");
+            spinner2.setEnabled(true);
+            b2.setBackgroundTintList(ColorStateList.valueOf(greenColor));
+            image2.setImageResource(R.drawable.red_p);
+        }else{
+            b2.setText("Pausa");
+            spinner2.setEnabled(false);
+            b2.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
+            image2.setImageResource(R.drawable.green_p);
         }
     }
 }

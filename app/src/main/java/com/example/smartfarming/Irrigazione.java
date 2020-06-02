@@ -68,35 +68,7 @@ public class Irrigazione extends FragmentActivity implements OnMapReadyCallback 
         }
     }
 
-    public void play2(View v){
-        int greenColor= Color.parseColor("#FF4CAF50");
-        if(b2.getText()=="Avvia") {
-            b2.setText("Pausa");
-            spinner2.setEnabled(false);
-            b2.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-            image2.setImageResource(R.drawable.green_p);
-        }else{
-            b2.setText("Avvia");
-            spinner2.setEnabled(true);
-            b2.setBackgroundTintList(ColorStateList.valueOf(greenColor));
-            image2.setImageResource(R.drawable.red_p);
-        }
-    }
 
-    public void play3(View v){
-        int greenColor= Color.parseColor("#FF4CAF50");
-        if(b3.getText()=="Avvia") {
-            b3.setText("Pausa");
-            spinner3.setEnabled(false);
-            b3.setBackgroundTintList(ColorStateList.valueOf(Color.RED));
-            image3.setImageResource(R.drawable.green_p);
-        }else{
-            b3.setText("Avvia");
-            spinner3.setEnabled(true);
-            b3.setBackgroundTintList(ColorStateList.valueOf(greenColor));
-            image3.setImageResource(R.drawable.red_p);
-        }
-    }
 
     public void addNewCampo(View view) {
         Intent intent = new Intent(getApplicationContext(), NuovoCampo.class);
