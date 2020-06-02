@@ -53,7 +53,7 @@ public class NuovoCampo extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent in1 = new Intent(getApplicationContext(), Irrigazione.class);
+                    Intent in1 = new Intent(getApplicationContext(), Irrigazione2.class);
                     in1.putExtra("campo", nomeCampo.getText().toString());
                     startActivity(in1);
                 }

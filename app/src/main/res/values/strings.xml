@@ -9,7 +9,6 @@
     <string name="googleMaps">AIzaSyC9B8rjg-j3n6egarVpmr_GaIpT0pSNmH4</string>
     <string name="activityDatiCampo">DatiCampo</string>
     <string name="activityNomeSolco">NuovoSolco</string>
-    <string name="activityDatiCampo2">DatiCampo2</string>
     <string name="activitySemina">Semina</string>
     <string name="activityNuovoCampo">NuovoCampo</string>
 </resources>
