@@ -18,7 +18,7 @@
         android:layout_height="250dp"
         android:layout_below="@+id/back"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp" ></fragment>
 
     <View
         android:id="@+id/view"

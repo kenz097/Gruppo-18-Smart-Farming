@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdate;
@@ -17,14 +18,14 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
+
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Irrigazione extends FragmentActivity implements OnMapReadyCallback {
-    private Button b1,b2,b3;
-    private ImageView image1,image2,image3;
-    private Spinner spinner1, spinner2, spinner3;
+    private Button b1;
+    private ImageView image1;
+    private Spinner spinner1;
     private GoogleMap mMap;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,6 @@ public class Irrigazione extends FragmentActivity implements OnMapReadyCallback 
         b1=(Button)findViewById(R.id.button_campo1);
         image1=(ImageView)findViewById(R.id.image1);
         spinner1=(Spinner)findViewById(R.id.scelta1);
-
-
-
 
         SupportMapFragment mapFragment=(SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -48,10 +46,13 @@ public class Irrigazione extends FragmentActivity implements OnMapReadyCallback 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap=googleMap;
+        float zoomLevel=16.0f;
         LatLng campi= new LatLng(40.780981, 14.792098);
         mMap.addMarker(new MarkerOptions().position(campi).title("Coltiviamo!"));
         mMap.animateCamera(CameraUpdateFactory.newLatLng(campi));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(campi,zoomLevel));
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
     }
 
     public void play1(View v){

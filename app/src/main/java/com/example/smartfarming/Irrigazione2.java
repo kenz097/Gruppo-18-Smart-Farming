@@ -59,9 +59,11 @@ public class Irrigazione2 extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        float zoomLevel=16.0f;
         LatLng campi= new LatLng(40.780981, 14.792098);
         mMap.addMarker(new MarkerOptions().position(campi).title("Coltiviamo!"));
         mMap.animateCamera(CameraUpdateFactory.newLatLng(campi));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(campi,zoomLevel));
         mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
     }
