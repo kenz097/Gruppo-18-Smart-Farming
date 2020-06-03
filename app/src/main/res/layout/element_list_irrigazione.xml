@@ -34,7 +34,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:background="@drawable/spinner_style"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#ACACAC"
         android:onClick="newLink"
         android:text="Collega"
         android:textColor="#ffff" />
