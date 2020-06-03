@@ -17,15 +17,14 @@
             android:value="@string/map_key"/>
 
         <activity android:name=".MainActivity" android:label="@string/activityMain">
-
-        </activity>
-        <activity android:name=".Stoccaggio" android:label="@string/activityStoccaggio">
-        </activity>
-        <activity android:name=".Homepage" android:label="@string/activityHomepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Stoccaggio" android:label="@string/activityStoccaggio">
+        </activity>
+        <activity android:name=".Homepage" android:label="@string/activityHomepage">
         </activity>
         <activity android:name=".Raccolta" android:label="@string/activityRaccolta">
         </activity>
