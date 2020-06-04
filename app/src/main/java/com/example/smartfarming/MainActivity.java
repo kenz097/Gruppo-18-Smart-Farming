@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.LayoutInflater;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         smarrita = findViewById(R.id.smarrita);
+        smarrita.setPaintFlags(smarrita.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
+        registrazione.setPaintFlags(registrazione.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
         smarrita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
