@@ -129,8 +129,7 @@ public class DatiCampo2 extends AppCompatActivity {
     }
 
     public void modItem(View v) {
-        Intent intent = new Intent(this, NuovoSolco.class);
-        startActivity(intent);
+
     }
 
     public void goBack(View view) {
