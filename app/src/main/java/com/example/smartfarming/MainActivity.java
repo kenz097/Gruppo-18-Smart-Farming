@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         smarrita = findViewById(R.id.smarrita);
-        smarrita.setPaintFlags(smarrita.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
-        registrazione.setPaintFlags(registrazione.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
+
         smarrita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
