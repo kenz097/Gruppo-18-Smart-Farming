@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,6 +27,8 @@ import java.util.ArrayList;
 
 public class DatiCampo2 extends AppCompatActivity {
     private ListView list;
+    private String str;
+    private EditText newNameSolco;
 
     BarChart barChart;
     ArrayList<Solco> arrayList;
@@ -41,7 +44,7 @@ public class DatiCampo2 extends AppCompatActivity {
         list = (ListView) findViewById(R.id.list);
 
         Bundle b1 = getIntent().getExtras();
-        String str = b1.getString("solco");
+        str = b1.getString("solco");
 
 
         ArrayList<Solco> arrayList = new ArrayList<>();
@@ -129,8 +132,40 @@ public class DatiCampo2 extends AppCompatActivity {
     }
 
     public void modItem(View v) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(DatiCampo2.this);
+        final View views = LayoutInflater.from(DatiCampo2.this).inflate(R.layout.custom_mod, null);
+        newNameSolco=views.findViewById(R.id.newNameSolco);
 
+        builder.setPositiveButton("Conferma nome Solco", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        str=newNameSolco.getText().toString();
+                    }
+        });
+        builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.setView(views);
+        AlertDialog dialog = builder.create();
+
+        // Finally, display the alert dialog
+        dialog.show();
+
+        // Get the alert dialog buttons reference
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+
+        // Change the alert dialog buttons text and background color
+        positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+        positiveButton.setBackgroundResource(R.drawable.border_button);
+        neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+        neutralButton.setBackgroundResource(R.drawable.border_button);
     }
+
 
     public void goBack(View view) {
         Intent intent = new Intent(this, Homepage.class);
