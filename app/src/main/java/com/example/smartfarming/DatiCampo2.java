@@ -1,9 +1,12 @@
 package com.example.smartfarming;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.fonts.Font;
+import android.graphics.fonts.FontStyle;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +33,7 @@ public class DatiCampo2 extends AppCompatActivity {
     private ListView list;
     private String str;
     private EditText newNameSolco;
-
+    private int font;
     BarChart barChart;
     ArrayList<Solco> arrayList;
     ArrayList<Materiali_Grafici_DatiCampo> arrayMaterialiGraficiDatiCampo = new ArrayList<>();
@@ -42,7 +46,7 @@ public class DatiCampo2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dati_campo);
         list = (ListView) findViewById(R.id.list);
-
+        font= FontStyle.FONT_WEIGHT_BOLD;
         Bundle b1 = getIntent().getExtras();
         str = b1.getString("solco");
 
@@ -135,15 +139,17 @@ public class DatiCampo2 extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(DatiCampo2.this);
         final View views = LayoutInflater.from(DatiCampo2.this).inflate(R.layout.custom_mod, null);
         newNameSolco=views.findViewById(R.id.newNameSolco);
-
+        final TextView nomeSolco= findViewById(R.id.row1);
         builder.setPositiveButton("Conferma nome Solco", new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         str=newNameSolco.getText().toString();
+                        nomeSolco.setText(str);
+                        Toast.makeText(DatiCampo2.this, "Hai modificato il nome del solco", Toast.LENGTH_SHORT).show();
                     }
         });
-        builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -161,8 +167,11 @@ public class DatiCampo2 extends AppCompatActivity {
 
         // Change the alert dialog buttons text and background color
         positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+        positiveButton.setTextSize(10);
         positiveButton.setBackgroundResource(R.drawable.border_button);
         neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+        neutralButton.setTextSize(10);
+        neutralButton.setTextAppearance(font);
         neutralButton.setBackgroundResource(R.drawable.border_button);
     }
 

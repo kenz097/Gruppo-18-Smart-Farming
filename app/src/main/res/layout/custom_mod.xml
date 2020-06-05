@@ -31,7 +31,8 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_below="@+id/textCustom"
-         android:layout_marginTop="20dp">
+         android:layout_marginTop="20dp"
+         android:layout_marginBottom="20dp">
 
          <TextView
              android:layout_width="wrap_content"
@@ -45,6 +46,9 @@
              android:id="@+id/newNameSolco"
              android:layout_width="220dp"
              android:layout_height="30dp"
+             android:paddingTop="5dp"
+             android:paddingLeft="5dp"
+             android:paddingBottom="5dp"
              android:background="@drawable/et_style"
              android:layout_toRightOf="@id/textSolco"
              android:inputType="textEmailAddress"

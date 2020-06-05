@@ -7,11 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -114,8 +111,10 @@ public class Raccolta extends AppCompatActivity {
 
         // Change the alert dialog buttons text and background color
         positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+        positiveButton.setTextSize(10);
         positiveButton.setBackgroundResource(R.drawable.border_button);
         neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+        neutralButton.setTextSize(10);
         neutralButton.setBackgroundResource(R.drawable.border_button);
     }
 

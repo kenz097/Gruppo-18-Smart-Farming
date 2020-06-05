@@ -3,10 +3,12 @@ package com.example.smartfarming;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,12 +17,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class NuovoCampo extends AppCompatActivity {
     private EditText nomeCampo;
+    private Button bluetooth;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nuovo_campo);
         nomeCampo = findViewById(R.id.campo);
-
+        bluetooth=findViewById(R.id.buttonDisp);
     }
 
     public void goBack(View view) {
@@ -29,13 +32,9 @@ public class NuovoCampo extends AppCompatActivity {
     }
 
     public void addNewDispositive(View v) {
-        Intent intent = new Intent(Intent.ACTION_MAIN, null);
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        ComponentName cn = new ComponentName("com.android.settings",
-                "com.android.settings.bluetoothSettings");
-        intent.setComponent(cn);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        int blue= Color.parseColor("#7BC7FF");
+        bluetooth.setBackgroundColor(blue);
+        Toast.makeText(this,"Il dispositivo è stato inserito",Toast.LENGTH_LONG).show();
     }
 
     public void addNuovoValore(View v) {
