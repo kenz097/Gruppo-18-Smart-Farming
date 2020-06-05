@@ -1,7 +1,6 @@
 package com.example.smartfarming;
 
 import android.app.AlertDialog;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -32,8 +31,7 @@ public class NuovoCampo extends AppCompatActivity {
     }
 
     public void addNewDispositive(View v) {
-        int blue= Color.parseColor("#7BC7FF");
-        bluetooth.setBackgroundColor(blue);
+        bluetooth.setBackgroundColor(R.drawable.bluetoothButton);
         Toast.makeText(this,"Il dispositivo è stato inserito",Toast.LENGTH_LONG).show();
     }
 

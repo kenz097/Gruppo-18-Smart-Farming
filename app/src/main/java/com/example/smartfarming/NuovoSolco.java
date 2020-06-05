@@ -33,8 +33,7 @@ public class NuovoSolco extends AppCompatActivity {
     }
 
     public void addNewDispositive(View v) {
-        int blue=Color.parseColor("#7BC7FF");
-      bluetooth.setBackgroundColor(blue);
+      bluetooth.setBackgroundColor(R.drawable.bluetoothButton);
       Toast.makeText(this,"Il dispositivo è stato inserito",Toast.LENGTH_LONG).show();
     }
 
