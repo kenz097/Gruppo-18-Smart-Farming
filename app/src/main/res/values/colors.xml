@@ -6,5 +6,5 @@
     <color name="ButtonColor">#F1C961</color>
     <color name="TableColor">#8CA3B9</color>
     <color name="ButtonIrrigazione">#FF4CAF50</color>
-    <color name="BlueToothButton">#7BC7FF</color>
+    <color name="bluetoothbutton">#7BC7FF</color>
 </resources>

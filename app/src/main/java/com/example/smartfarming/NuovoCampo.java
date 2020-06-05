@@ -31,7 +31,8 @@ public class NuovoCampo extends AppCompatActivity {
     }
 
     public void addNewDispositive(View v) {
-        bluetooth.setBackgroundColor(R.drawable.bluetoothButton);
+        int blue= Color.parseColor("#7BC7FF");
+        bluetooth.setBackgroundColor(blue);
         Toast.makeText(this,"Il dispositivo è stato inserito",Toast.LENGTH_LONG).show();
     }
 
