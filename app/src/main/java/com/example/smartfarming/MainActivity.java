@@ -68,8 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // Change the alert dialog buttons text and background color
                 positiveButton.setTextColor(Color.parseColor("#FFFFFF"));
+                positiveButton.setTextSize(10);
                 positiveButton.setBackgroundResource(R.drawable.border_button);
                 neutralButton.setTextColor(Color.parseColor("#FFFFFF"));
+                neutralButton.setTextSize(10);
                 neutralButton.setBackgroundResource(R.drawable.border_button);
             }
         });

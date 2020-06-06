@@ -45,7 +45,7 @@ public class NuovoCampo extends AppCompatActivity {
             TextView title = views.findViewById(R.id.title_add);
             TextView body = views.findViewById(R.id.full_text);
             title.setText("Inserimento dispositivo nel sistema");
-            body.setText("Dispositivo inserito correttamente\n              nel sistema");
+            body.setText("\tDispositivo inserito correttamente\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnel sistema");
             builder.setView(views);
             builder.show();
             new Handler().postDelayed(new Runnable() {

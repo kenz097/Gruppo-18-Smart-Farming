@@ -65,7 +65,7 @@ public class Raccolta extends AppCompatActivity {
             TextView title = views.findViewById(R.id.title_add);
             TextView body = views.findViewById(R.id.full_text);
             title.setText("Inserimento quantità nel sistema");
-            body.setText("Quantita' inserita correttamente\n              nel sistema");
+            body.setText("\tQuantità inserita correttamente\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnel sistema");
             builder.setView(views);
             builder.show();
 
