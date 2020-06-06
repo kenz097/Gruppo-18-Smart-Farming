@@ -25,7 +25,6 @@
         <activity android:name=".Stoccaggio" android:label="@string/activityStoccaggio">
         </activity>
         <activity android:name=".Homepage" android:label="@string/activityHomepage">
-
         </activity>
         <activity android:name=".Raccolta" android:label="@string/activityRaccolta">
         </activity>
@@ -35,7 +34,7 @@
         </activity>
         <activity android:name=".DatiCampo" android:label="@string/activityDatiCampo">
         </activity>
-        <activity android:name=".NuovoSolco" android:label="@string/activityDatiCampo">
+        <activity android:name=".NuovoSolco" android:label="@string/activityNuovoSolco">
         </activity>
         <activity android:name=".DatiCampo2" android:label="@string/activityDatiCampo">
         </activity>
