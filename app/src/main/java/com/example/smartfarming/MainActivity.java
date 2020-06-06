@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
         if (email.getText().toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
             if (password.getText().toString().equalsIgnoreCase("ciaociao")) {
                 Intent intent = new Intent(this, Homepage.class);
-
                 startActivity(intent);
+                Toast.makeText(this,"Benvenuto!",Toast.LENGTH_LONG).show();
             }
         } else {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);

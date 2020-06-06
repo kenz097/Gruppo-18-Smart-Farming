@@ -229,16 +229,10 @@
             android:layout_marginTop="10dp"
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearlayout4"
-        android:id="@+id/linearlayout5"
-        android:layout_marginTop="20dp">
         <Button
             android:id="@+id/inserisciProdotto"
-            android:layout_width="fill_parent"
+            android:layout_below="@id/linearlayout4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="22dp"
             android:background="@drawable/border_button"
@@ -247,5 +241,5 @@
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />
-    </LinearLayout>
+
 </RelativeLayout>
