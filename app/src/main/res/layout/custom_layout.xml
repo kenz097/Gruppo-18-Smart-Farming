@@ -50,6 +50,7 @@
             android:layout_height="30dp"
             android:paddingTop="5dp"
             android:paddingLeft="5dp"
+            android:layout_marginRight="50dp"
             android:paddingBottom="5dp"
             android:background="@drawable/et_style"
             android:layout_marginLeft="150dp"
