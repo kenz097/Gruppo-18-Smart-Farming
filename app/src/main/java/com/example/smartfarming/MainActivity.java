@@ -80,17 +80,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void checkLogin(View view) {
-        if (email.getText().toString().equalsIgnoreCase("giacomomancini@gmail.com")) {
-            if (password.getText().toString().equalsIgnoreCase("ciaociao")) {
+        if ((email.getText().toString().equalsIgnoreCase("giacomomancini@gmail.com")) && (password.getText().toString().equalsIgnoreCase("ciaociao"))) {
                 Intent intent = new Intent(this, Homepage.class);
                 startActivity(intent);
                 Toast.makeText(this,"Benvenuto!",Toast.LENGTH_LONG).show();
-            }
         } else {
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setTitle("Errore");
-            alert.setMessage("Email o password errati");
-            alert.show();
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.setTitle("Errore");
+                alert.setMessage("Email o password errati");
+                alert.show();
         }
     }
 
