@@ -104,14 +104,14 @@ public class DatiCampo2 extends AppCompatActivity {
 
     public void deleteItem(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(DatiCampo2.this);
-        builder.setTitle("Cancellazione campo");
+        builder.setTitle("Cancellazione solco");
         builder.setMessage("Sei sicuro di voler eliminare il solco?");
         builder.setPositiveButton("Elimina solco", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(DatiCampo2.this, DatiCampo.class);
                 startActivity(intent);
-                Toast.makeText(DatiCampo2.this, "Prodotto eliminato con successo", Toast.LENGTH_LONG).show();
+                Toast.makeText(DatiCampo2.this, "Solco eliminato con successo", Toast.LENGTH_LONG).show();
             }
         });
         builder.setNeutralButton("Annulla", new DialogInterface.OnClickListener() {
