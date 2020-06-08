@@ -39,7 +39,7 @@ public class NuovoSolco extends AppCompatActivity {
 
     public void addNewSolco(View v) {
         if (nomeSolco.getText().toString().equalsIgnoreCase("")) {
-            Toast.makeText(NuovoSolco.this, "Inserisci il nome del dispositivo", Toast.LENGTH_LONG).show();
+            Toast.makeText(NuovoSolco.this, "Inserisci il nome del solco", Toast.LENGTH_LONG).show();
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(NuovoSolco.this);
             final View views = LayoutInflater.from(NuovoSolco.this).inflate(R.layout.form_done, null);
